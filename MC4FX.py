@@ -61,12 +61,7 @@ class RLMomentum():
                 return np.argmax(self.q[state_short, state_long, :])
 
     def actionToPosition(self, action):
-        if action == 0:
-            return -1
-        elif action == 1:
-            return 0
-        elif action == 2:
-            return 1
+       return action -1
 
     def updateRewards(self, reward, state_short, state_long, action):
         self.isVisited[state_short, state_long, action] = True
